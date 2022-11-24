@@ -11,6 +11,9 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
+/**
+ * Scraper that fetches Events from 10times.com
+ */
 public class TenTimesScraper implements Scraper{
 
     private static final String URL = "https://10times.com/london-uk/climate-change";

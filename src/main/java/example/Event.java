@@ -2,6 +2,9 @@ package example;
 
 import java.time.LocalDate;
 
+/**
+ * Class defining an Event.
+ */
 public class Event {
     private String name;
     private LocalDate startDate;

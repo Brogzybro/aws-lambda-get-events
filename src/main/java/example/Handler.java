@@ -24,6 +24,14 @@ public class Handler implements RequestHandler<ScheduledEvent, String> {
     private static final Logger logger = LoggerFactory.getLogger(Handler.class);
     private final List<Scraper> scrapers =  List.of(new TenTimesScraper());
 
+    /**
+     * Method that will be called when the lambda function triggers.
+     * Collects Events from scrapers.
+     *
+     * @param scheduledEvent The Lambda Function input
+     * @param context The Lambda execution environment context object.
+     * @return
+     */
     @Override
     public String handleRequest(ScheduledEvent scheduledEvent, Context context) {
 
