@@ -34,6 +34,10 @@ First package the code using maven: `mvn package`. This will create a `.jar` fil
 
 In lambda under `Code` and `Code source` press `upload from .zip or .jar file`. Select the `.jar` file produced in previous step.
 
+Under `Runtime settings` make sure that `Handler` is set the correct handler function with correct package, class, and function:
+
+    example.Handler::handleRequest
+
 # Test
 ### Testing locally
 The Handler can be tested locally running the function `Handler.main()`.
@@ -58,3 +62,12 @@ Give the event a name and create a json for a Scheduled event. For example like 
     }
 
 You can then save and test using the Event.
+
+# Disable the function
+
+To disable the function you can disable the EventBridge rule.
+
+Navigate to the rule either by pressing `EventBridge (CloudWatch Events)` in the `Function overview` and then follow the link to the rule, 
+or search for EventBridge in the AWS Console and locate the rule this way.
+
+Once you have located the rule you can simply Disable and Enable it. Or edit it if a new schedule is preferred.
